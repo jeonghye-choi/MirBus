@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>MirBus</div>
+  <travel-form v-model:formData="formData" />
+  <travel :formData="formData" />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { defineComponent, reactive } from 'vue';
+import TravelForm from './components/TravelForm.vue';
+import Travel from './components/Travel.vue';
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TravelForm,
+    Travel,
+  },
+  setup() {
+    const formData = reactive({
+      from: '',
+      to: '',
+      departureTime: '',
+    });
+    return {
+      formData,
+    };
+  },
+});
 </script>
 
 <style>
