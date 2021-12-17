@@ -1,11 +1,6 @@
 <template>
   <div>MirBus</div>
-  <travel-form
-    v-model:from="formData.from"
-    v-model:to="formData.to"
-    v-model:departureTime="formData.departureTime"
-  />
-  <br /><br /><br /><br />
+  <travel-form v-model:formData="formData" />
   <travel :formData="formData" />
 </template>
 
@@ -26,7 +21,6 @@ export default defineComponent({
       to: '',
       departureTime: '',
     });
-
     return {
       formData,
     };
