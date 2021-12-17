@@ -52,6 +52,19 @@ export default {
   methods: {
     setFormData: function () {
       console.log(this.propsFormData);
+      if (
+        !this.propsFormData.from ||
+        !this.propsFormData.to ||
+        !this.propsFormData.departureTime
+      ) {
+        console.log('select all value');
+        return;
+      }
+      if (this.propsFormData.from == this.propsFormData.to) {
+        console.log('출발지와 도착지가 같습니다!');
+      } else {
+        console.log('submit');
+      }
     },
   },
 };
