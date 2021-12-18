@@ -1,0 +1,9 @@
+{
+  "theme_color": "#96A68D",
+  "background_color": "#F6EFEF",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "Vue PWA",
+  "short_name": "PWA"
+}
