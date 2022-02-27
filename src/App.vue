@@ -1,31 +1,18 @@
 <template>
-  <div>MirBus</div>
-  <travel-form v-model:formData="formData" />
-  <travel :formData="formData" />
+  <main-layout>
+    <router-view />
+  </main-layout>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-import TravelForm from './components/TravelForm.vue';
-import Travel from './components/Travel.vue';
+import MainLayout from '@/layouts/MainLayout.vue';
 
-export default defineComponent({
+export default {
   name: 'App',
   components: {
-    TravelForm,
-    Travel,
+    MainLayout,
   },
-  setup() {
-    const formData = reactive({
-      from: '',
-      to: '',
-      departureTime: '',
-    });
-    return {
-      formData,
-    };
-  },
-});
+};
 </script>
 
 <style>
