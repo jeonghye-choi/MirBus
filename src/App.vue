@@ -1,27 +1,15 @@
 <template>
-  <main-layout>
-    <router-view />
-  </main-layout>
+  <v-app>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import MainLayout from '@/layouts/MainLayout.vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'App',
-  components: {
-    MainLayout,
-  },
-};
+});
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
